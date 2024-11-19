@@ -1,0 +1,203 @@
+
+
+### Connexion
+POST https://apocalypse.florencecarlin-server.eddi.cloud/api/v1/login_check
+Content-Type: application/json
+
+{
+    "username":"blenoir@yahoo.fr",
+    "password":"appo"
+}
+
+### Connexion
+POST http://localhost:8080/api/v1/login_check
+Content-Type: application/json
+
+{
+    "username":"blenoir@yahoo.fr",
+    "password":"appo"
+}
+
+### ! Article
+
+### Browse
+GET http://localhost:8080/api/v1/article
+### Read
+GET http://localhost:8080/api/v1/article/188
+
+### Ajout d'un add
+POST http://localhost:8080/api/v1/article
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MTY3NDA5ODQsImV4cCI6MTcxNjc0NDU4NCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiZGVsb3JtZS5wYXVsZXR0ZUBzYXV2YWdlLmZyIn0.SUYEUQO4cizhuYGSoSzmbbIs8IccIgJnANgdpPJ_hyyEy0nJNp_tAFHEtqkKMZF-eaPCiCD6CDc_YMCqU-PaB6NQeaCxKulnAFARlG3fxz0L22lV8VNzuucrB-QP0P3GkoVld4hydvF2MEPu6u6N01d3xMMN6PbmC5xBfBfub0QSGlSdc5wrd4w2juJm_go9YGG8vB39TJLkedYvAwbatxaU5p27GSCQXdzZWN_h65NDJIKCBcMrrzRDv6Pgn7ZP9cqqmd1R4QO6gO-tR6FXKQc9q8jPUzD_-fKNtZHiQnaDIT_-_-J5vpjY0UhR4Ymk2U8uWBF7XKNff1DsUVBWvQ
+
+{
+    "title": " creation",
+    "summary": "Test creation article",
+    "content": "Le Test",
+    "category": 90,
+    "status": 130,
+
+
+}
+
+### Edit
+PATCH http://localhost:8080/api/v1/article/1
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MTc1NzY0OTcsImV4cCI6MTcxNzU4MDA5Nywicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6Im1haGUuam9zZXBoQHlhaG9vLmZyIn0.MuH2udORc61UyaCZ3ySulPsv0lZSAZMm3untN4_mezlW9ifP_SObIqSgZVSQxudzPghYPvF4Vz9hwNYa0_ji9y5WILd5giMHbPhetAgfMRw9Pn1-9UWCJs2unWhWJPoBivkujoS5oZMS3YwNQ623dkVaZqhCqaRETncxLPTrpi1LIMj26cVsasAfmMyoUEwNS0mxpjeQOFFIAFvZsUTVEIZNcKp4aM8riuNjvd-r8X6eFBCBI4Nshj4MMOO0sDQs5h1l9CWBB2TGqOvBsjzxTEncguQ6RI6X0AyiyYn7DmSyduBtJyaxdioUOn9885RH990mRZuJkPY6QFYbOvBI-g
+
+{
+    "title": "test titre"
+
+}
+
+### Delete
+DELETE http://localhost:8080/api/v1/article/200
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MTY0ODE2MjUsImV4cCI6MTcxNjQ4NTIyNSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiZGVsb3JtZS5wYXVsZXR0ZUBzYXV2YWdlLmZyIn0.iu1txT8Wr5Xi2rKOWmKJusXX_OmJbW_WtJnMkaDoNkzkeQ2QaM5Uq-_q3BL6YKjecQ7zC52sovD3kwQ9JacJfmGucDB3I_ezKmQiQLTV_TijiPesfC-W2bjcjtTtKnP6tKwIVd4Q7hzcLO2-ROEfgUE9vgLPV8A6nsMB_MMwifkr38DgzjkTNCRJa25gPSUXiMPe4mKKd2erEzrrxy7v4QboB5jdJ9KK4v0Y6WxnLfR5yW1Jpk4EJLoJIxS6aeJkbhaRViPySvNQoLTnnyTBkp8R6yWHfBZ87nAf3BlyD0FQteS5LCFsylr50EM3G3E7zS1AZAt6QFxauj5i7Cew9A
+
+### ! Type
+
+### Browse
+GET http://localhost:8080/api/v1/user
+
+
+### ! Status
+
+### Browse
+GET http://localhost:8080/api/v1/status
+
+### Read
+GET http://localhost:8080/api/v1/status/111
+
+### Add
+POST http://localhost:8080/api/v1/status
+Content-Type: application/json
+
+{
+    "name": "test2"
+}
+
+### Edit
+PUT http://localhost:8080/api/v1/status/122
+Content-Type: application/json
+
+{
+    "name": "zzzzz"
+}
+
+### Delete
+DELETE http://localhost:8080/api/v1/status/114
+Content-Type: application/json
+
+
+### ! category
+
+### Browse
+GET http://localhost:8080/api/v1/category
+
+### READ
+GET http://localhost:8080/api/v1/category/66
+
+### add
+POST http://localhost:8080/api/v1/category
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MTY1NTc2MzAsImV4cCI6MTcxNjU2MTIzMCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiZGVsb3JtZS5wYXVsZXR0ZUBzYXV2YWdlLmZyIn0.KYJ9IzhBWqIF1IxhDPBZSaoxSetaqhWaVwU0ZNnYOslsin9-vUyqJXpBgU7HVH2AKd2qVhB0MwaENsRc-l_XrgDvUMy7rAcmWNpPQYPE2AOl1upTIozLkbSJd3caOteTsnJpn2VsNGWeAoduxtljc09YXjsM-g6wqUppdGDnJLdTB8UKmETbgVdfhqbYB16z2esMGGqu_y0sqq3nW7W6PNzOXNqhky2JO3zJNjFtrM9ycYxPTXIdBGVnG_Va1oqqvkR6SeV2UJWnZ0WeZggZe4EULji-Y96N-fcpDJAy3BEvy-dXK0Xl1m7AA43tJCVn638bzm6NB9-X7ODIFSEDzg
+
+{
+    "name": "test cration category",
+    "home_order":"h"
+}
+
+### EDIT
+PUT http://localhost:8080/api/v1/category/73
+Content-Type: application/json
+
+{
+    "name": "test modification category",
+    "home_order":0
+}
+
+
+DELETE http://localhost:8080/api/v1/category/67
+Content-Type: application/json
+
+### ! questions
+
+### Browse
+GET http://localhost:8080/api/v1/question
+
+### read
+GET http://localhost:8080/api/v1/question/11
+
+### ADD
+POST http://localhost:8080/api/v1/question
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MTY1NTc2MzAsImV4cCI6MTcxNjU2MTIzMCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiZGVsb3JtZS5wYXVsZXR0ZUBzYXV2YWdlLmZyIn0.KYJ9IzhBWqIF1IxhDPBZSaoxSetaqhWaVwU0ZNnYOslsin9-vUyqJXpBgU7HVH2AKd2qVhB0MwaENsRc-l_XrgDvUMy7rAcmWNpPQYPE2AOl1upTIozLkbSJd3caOteTsnJpn2VsNGWeAoduxtljc09YXjsM-g6wqUppdGDnJLdTB8UKmETbgVdfhqbYB16z2esMGGqu_y0sqq3nW7W6PNzOXNqhky2JO3zJNjFtrM9ycYxPTXIdBGVnG_Va1oqqvkR6SeV2UJWnZ0WeZggZe4EULji-Y96N-fcpDJAy3BEvy-dXK0Xl1m7AA43tJCVn638bzm6NB9-X7ODIFSEDzg
+
+{
+    "title": "test",
+    "content": "2003-02-04 00:00:00",
+    "created_at": "2003-02-04 00:00:00",
+    "user": 113
+}
+
+### edit
+PUT http://localhost:8080/api/v1/question/181
+Content-Type: application/json
+
+{
+    "title": "test modif",
+    "content": "test",
+    "created_at": "2003-02-04 00:00:00",
+    "user": 113
+}
+
+### DELTE d'une reponse
+DELETE http://localhost:8080/api/v1/question/181
+Content-Type: application/json
+
+
+### ! answers
+
+###  Browse
+GET http://localhost:8080/api/v1/answer
+
+###  read
+GET http://localhost:8080/api/v1/answer/151
+
+
+### add 
+POST http://localhost:8080/api/v1/answer
+Content-Type: application/json
+
+{
+    "content": "test",
+    "created_at": "2003-02-04 00:00:00",
+    "question":151,
+    "user":113
+}
+
+
+### rfit 
+PUT http://localhost:8080/api/v1/answer
+Content-Type: application/json
+
+{
+    "content": "test",
+    "created_at": "2003-02-04 00:00:00",
+    "question":151,
+    "user":113
+
+}
+
+### DELTE 
+DELETE http://localhost:8080/api/v1/answer/151
+
+
+### rfit 
+PUT http://apocalypse.florencecarlin-server.eddi.cloud/api/v1/user/1
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MTY5Nzk0MTgsImV4cCI6MTcxNjk4MzAxOCwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6InZnYXVkaW5AbGVnZW5kcmUuY29tIn0.lT5QYrKJrStcNXfH8Q5bi5eW4is0lPVuhYTiuhInYfsC_OADmN7SPmU7eeTtprTbXCbTOhofuE9gIMdqhbEW2Ka99KXFexeRH9sPvJkl7baFSo7effsluIH88w29bqmaEoL7lcL-wG_6AnMJYw_QiWhSWtCL_J1Tclj1dUSdrc_fJ5s8-EdTJMeelyapY3pL_3Nb365COODjBjdetnv2_LU5VN3BJvOsGKMeiEhZ8RPScQ1OcTTJ52XLh_F2hToMZqb_ZnMZGyZHmba8B49Qk-9Zq6gHFF7zO8ZwWOcjpG-mwLyl-iKlbTxry6JskE0ptU2gOWPItNGB08iOQvN5Iw
+
+{
+    "firstname": "Julie"
+}
